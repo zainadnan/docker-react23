@@ -1,0 +1,18 @@
+sudo:required
+
+services:
+
+ - docker
+
+before_install:
+
+ - docker build -t zainadnan/docker-react -f Dockerfile.dev .
+
+script:
+
+ - docker run zainadnan/docker-react npm run test -- --coverage  
+
+
+
+
+
