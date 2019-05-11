@@ -6,12 +6,11 @@ services:
 
 before_install:
  
- - sudo apt-get update
- - docker build -t zainadnan/docker-react -f Dockerfile.dev .
+ - docker build -t zainadnan/docker-react
   
 script:
 
- - docker run zainadnan/docker-react npm run test -- --coverage  
+ - docker run zainadnan/docker-react npm run build
 
 
 
